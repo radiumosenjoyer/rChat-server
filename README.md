@@ -10,15 +10,15 @@ On first run, the server creates `config.json` if it does not exist. Review its
 TLS certificate paths, then:
 
 ```sh
-cargo run --release -- keygen
-cargo run --release -- invite add 'correct horse battery' --uses 1
-cargo run --release -- serve
+cargo run --release keygen
+cargo run --release invite add 'correct horse battery' --uses 1
+cargo run --release serve
 ```
 
 Override the configured listen address for one run with:
 
 ```sh
-cargo run --release -- serve --host 0.0.0.0 --port 8443
+cargo run --release serve --host 0.0.0.0 --port 8443
 ```
 
 `keygen` creates a self-signed certificate for `localhost` without overwriting
@@ -33,6 +33,7 @@ refuses to start without TLS unless that flag is explicit.
 ```sh
 cargo test
 ```
+It is possible to add automatic account deletion TTLs in the config.json file.
 
 The server intentionally does not implement HPKE. It validates and stores the
 wire envelope as opaque bytes; RFC 9180 encryption, message framing, raw-payload
