@@ -1,0 +1,6 @@
+/target/
+/config.json
+/*.db
+/*.db-shm
+/*.db-wal
+.DS_Store
