@@ -21,10 +21,10 @@ Set these on the Vercel project:
 | `ACCOUNT_TTL_SECONDS` | no | Account expiry. `0` disables it. |
 | `MESSAGE_TTL_SECONDS` | no | Message ciphertext TTL. Default 30 days. |
 
-Deploy this branch. `vercel.json` rewrites `/v1/*` to the Rust function in
-`api/index.rs` (`vercel_runtime` with Axum). The function is Hobby-friendly: it
-is HTTP only. Clients connect with HTTPS to the Vercel edge. TLS 1.3-only, if
-you want that, is a client requirement.
+Deploy this branch. `vercel.json` rewrites `/v1/*` to `src/main.rs`
+(`vercel_runtime` with Axum). The function is Hobby-friendly: it is HTTP only.
+Clients connect with HTTPS to the Vercel edge. TLS 1.3-only, if you want that,
+is a client requirement.
 
 Expiry is the on-request sweep (`expire_accounts` / `expire_ephemeral`). Rate
 limits stay in memory per instance.

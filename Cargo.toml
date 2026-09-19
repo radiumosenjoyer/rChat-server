@@ -6,7 +6,7 @@ default-run = "main"
 
 [[bin]]
 name = "main"
-path = "api/index.rs"
+path = "src/main.rs"
 
 [[bin]]
 name = "rchat-server"
