@@ -21,7 +21,7 @@ base64 = "0.22"
 chrono = { version = "0.4", default-features = false, features = ["clock", "serde"] }
 clap = { version = "4", features = ["derive"] }
 ed25519-dalek = "2"
-libsql = { version = "0.9", default-features = false, features = ["remote"] }
+libsql = { version = "0.9", default-features = false, features = ["remote", "tls"] }
 rand = "0.8"
 rcgen = "0.14"
 rusqlite = { version = "0.32", features = ["bundled"] }
