@@ -36,8 +36,8 @@ Point `invite` at the same Turso database the function uses:
 ```sh
 export TURSO_DATABASE_URL='libsql://<db>.turso.io'
 export TURSO_AUTH_TOKEN='...'
-cargo run --release invite add 'correct horse battery' --uses 1
-cargo run --release invite revoke 'correct horse battery'
+cargo run --release --bin rchat-server invite add 'correct horse battery' --uses 1
+cargo run --release --bin rchat-server invite revoke 'correct horse battery'
 ```
 
 ## API

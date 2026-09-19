@@ -2,10 +2,15 @@
 name = "rchat-server"
 version = "0.1.0"
 edition = "2024"
+default-run = "main"
 
 [[bin]]
-name = "index"
+name = "main"
 path = "api/index.rs"
+
+[[bin]]
+name = "rchat-server"
+path = "src/bin/rchat-server.rs"
 
 [dependencies]
 anyhow = "1"
